@@ -1,0 +1,15 @@
+server:
+  port: ${PORT}
+
+application:
+  token:
+      secret-base64: ${TOKEN_SECRET}
+
+spring:
+  data:
+    mongodb:
+      host: ${MONGO_HOST}
+      port: ${MONGO_PORT}
+      database: ${MONGO_DATABASE}
+      username: ${MONGO_USERNAME}
+      password: ${MONGO_PASSWORD}
