@@ -1,4 +1,4 @@
-package com.drsanches.clicker.data;
+package com.drsanches.clicker.data.user;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

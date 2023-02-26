@@ -1,4 +1,4 @@
-package com.drsanches.clicker.data;
+package com.drsanches.clicker.data.user;
 
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 import reactor.core.publisher.Mono;

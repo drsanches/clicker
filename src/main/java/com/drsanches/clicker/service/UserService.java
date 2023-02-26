@@ -1,7 +1,7 @@
 package com.drsanches.clicker.service;
 
-import com.drsanches.clicker.data.User;
-import com.drsanches.clicker.data.UserRepository;
+import com.drsanches.clicker.data.user.User;
+import com.drsanches.clicker.data.user.UserRepository;
 import com.drsanches.clicker.data.dto.UserAuthDTO;
 import com.drsanches.clicker.data.dto.UserDTO;
 import com.drsanches.clicker.exception.NoUserException;

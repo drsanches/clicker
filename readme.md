@@ -1,4 +1,4 @@
-# Clicker
+# Clicker - Reactive Spring application using web tokens
 
 ## Environment
 

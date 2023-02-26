@@ -13,13 +13,13 @@ function setConnected(connected) {
 }
 
 function connect() {
-    var socket = new SockJS('/clicks-websocket');
+    var socket = new SockJS("/clicks-websocket");
     stompClient = Stomp.over(socket);
     stompClient.connect({}, function (frame) {
         setConnected(true);
-        console.log('Connected: ' + frame);
-        stompClient.subscribe('/topic/clicks', function (response) {
-            showResponse(JSON.parse(response.body).content);
+        console.log("Connected: " + frame);
+        stompClient.subscribe("/topic/clicks", function (response) {
+            showResponse(JSON.parse(response.body).count);
         });
     });
 }
@@ -33,7 +33,11 @@ function disconnect() {
 }
 
 function sendClicks() {
-    stompClient.send("/websocket/click", {}, JSON.stringify({'clicks': $("#clicks").val()}));
+    stompClient.send(
+            "/websocket/click",
+            {"Authorization": $("#authorization").val()},
+            JSON.stringify({"clicks": $("#clicks").val()})
+    );
 }
 
 function showResponse(message) {
